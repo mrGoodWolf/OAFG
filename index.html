@@ -8,16 +8,136 @@
 <body>
     <h1>Aircraft-set.xml Generator</h1>
     <form id="aircraftForm">
-        <label for="name">Aircraft Name:</label>
-        <input type="text" id="name" name="name" required><br>
-
+        <h2>Basic Information</h2>
         <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea><br>
+        <input type="text" id="description" name="description" required><br>
 
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author" required><br>
+        <label for="longDescription">Long Description:</label>
+        <textarea id="longDescription" name="longDescription" required></textarea><br>
 
-        <!-- Add more fields as necessary -->
+        <label for="aircraftVersion">Aircraft Version:</label>
+        <input type="text" id="aircraftVersion" name="aircraftVersion"><br>
+
+        <label for="minimumFgVersion">Minimum FG Version:</label>
+        <input type="text" id="minimumFgVersion" name="minimumFgVersion"><br>
+
+        <label for="expectedAircraftDirName">Expected Aircraft Dir Name:</label>
+        <input type="text" id="expectedAircraftDirName" name="expectedAircraftDirName"><br>
+
+        <h2>Ratings</h2>
+        <label for="fdmRating">FDM Rating (1-5):</label>
+        <input type="number" id="fdmRating" name="fdmRating" min="1" max="5"><br>
+
+        <label for="systemsRating">Systems Rating (1-5):</label>
+        <input type="number" id="systemsRating" name="systemsRating" min="1" max="5"><br>
+
+        <label for="cockpitRating">Cockpit Rating (1-5):</label>
+        <input type="number" id="cockpitRating" name="cockpitRating" min="1" max="5"><br>
+
+        <label for="modelRating">Model Rating (1-5):</label>
+        <input type="number" id="modelRating" name="modelRating" min="1" max="5"><br>
+
+        <h2>Authors & Maintainers</h2>
+        <label for="authors">Authors (comma-separated):</label>
+        <input type="text" id="authors" name="authors"><br>
+
+        <label for="maintainers">Maintainers (comma-separated):</label>
+        <input type="text" id="maintainers" name="maintainers"><br>
+
+        <h2>Variants</h2>
+        <label for="primarySet">Primary Set:</label>
+        <input type="checkbox" id="primarySet" name="primarySet"><br>
+
+        <label for="variantOf">Variant Of:</label>
+        <input type="text" id="variantOf" name="variantOf"><br>
+
+        <h2>Tags</h2>
+        <label for="tags">Tags (comma-separated):</label>
+        <input type="text" id="tags" name="tags"><br>
+
+        <h2>URLs</h2>
+        <label for="homePage">Home Page:</label>
+        <input type="url" id="homePage" name="homePage"><br>
+
+        <label for="support">Support:</label>
+        <input type="url" id="support" name="support"><br>
+
+        <label for="wikipedia">Wikipedia:</label>
+        <input type="url" id="wikipedia" name="wikipedia"><br>
+
+        <label for="codeRepository">Code Repository:</label>
+        <input type="url" id="codeRepository" name="codeRepository"><br>
+
+        <h2>Previews</h2>
+        <label for="previews">Previews (comma-separated paths):</label>
+        <input type="text" id="previews" name="previews"><br>
+
+        <h2>Flight Model</h2>
+        <label for="flightModel">Flight Model:</label>
+        <input type="text" id="flightModel" name="flightModel"><br>
+
+        <label for="aero">Aero:</label>
+        <input type="text" id="aero" name="aero"><br>
+
+        <h2>Startup</h2>
+        <label for="splashLogoImage">Splash Logo Image:</label>
+        <input type="text" id="splashLogoImage" name="splashLogoImage"><br>
+
+        <h2>Visual Aircraft Model</h2>
+        <label for="modelPath">Model Path:</label>
+        <input type="text" id="modelPath" name="modelPath"><br>
+
+        <label for="fallbackModelIndex">Fallback Model Index:</label>
+        <input type="text" id="fallbackModelIndex" name="fallbackModelIndex"><br>
+
+        <label for="soundPath">Sound Path:</label>
+        <input type="text" id="soundPath" name="soundPath"><br>
+
+        <label for="panelPath">Panel Path:</label>
+        <input type="text" id="panelPath" name="panelPath"><br>
+
+        <label for="autopilotPath">Autopilot Path:</label>
+        <input type="text" id="autopilotPath" name="autopilotPath"><br>
+
+        <label for="checklists">Checklists:</label>
+        <input type="text" id="checklists" name="checklists"><br>
+
+        <h2>Performance and Flight-planning</h2>
+        <label for="icaoType">ICAO Type:</label>
+        <input type="text" id="icaoType" name="icaoType"><br>
+
+        <label for="wakeTurbulenceCategory">Wake Turbulence Category:</label>
+        <input type="text" id="wakeTurbulenceCategory" name="wakeTurbulenceCategory"><br>
+
+        <label for="equipment">Equipment:</label>
+        <input type="text" id="equipment" name="equipment"><br>
+
+        <label for="surveillance">Surveillance:</label>
+        <input type="text" id="surveillance" name="surveillance"><br>
+
+        <label for="takeoffLength">Takeoff Length (ft):</label>
+        <input type="number" id="takeoffLength" name="takeoffLength"><br>
+
+        <label for="landingLength">Landing Length (ft):</label>
+        <input type="number" id="landingLength" name="landingLength"><br>
+
+        <label for="cruiseAirspeed">Cruise Airspeed (knots):</label>
+        <input type="number" id="cruiseAirspeed" name="cruiseAirspeed"><br>
+
+        <label for="cruiseAltitude">Cruise Altitude (ft):</label>
+        <input type="number" id="cruiseAltitude" name="cruiseAltitude"><br>
+
+        <label for="approachAirspeed">Approach Airspeed (knots):</label>
+        <input type="number" id="approachAirspeed" name="approachAirspeed"><br>
+
+        <label for="maximumAltitude">Maximum Altitude (ft):</label>
+        <input type="number" id="maximumAltitude" name="maximumAltitude"><br>
+
+        <label for="maximumMach">Maximum Mach:</label>
+        <input type="number" step="0.001" id="maximumMach" name="maximumMach"><br>
+
+        <label for="maximumAirspeed">Maximum Airspeed (knots):</label>
+        <input type="number" id="maximumAirspeed" name="maximumAirspeed"><br>
 
         <button type="submit">Generate XML</button>
     </form>
@@ -33,9 +153,76 @@
 
             const xml = `
                 <PropertyList>
-                    <name>${data.name}</name>
-                    <description>${data.description}</description>
-                    <author>${data.author}</author>
+                    <sim>
+                        <description>${data.description}</description>
+                        <long-description>${data.longDescription}</long-description>
+                        <aircraft-version>${data.aircraftVersion}</aircraft-version>
+                        <minimum-fg-version>${data.minimumFgVersion}</minimum-fg-version>
+                        <expected-aircraft-dir-name>${data.expectedAircraftDirName}</expected-aircraft-dir-name>
+                        <rating>
+                            <FDM>${data.fdmRating}</FDM>
+                            <systems>${data.systemsRating}</systems>
+                            <cockpit>${data.cockpitRating}</cockpit>
+                            <model>${data.modelRating}</model>
+                        </rating>
+                        <author>${data.authors}</author>
+                        <maintainers>${data.maintainers}</maintainers>
+                        <primary-set>${data.primarySet ? 'true' : 'false'}</primary-set>
+                        <variant-of>${data.variantOf}</variant-of>
+                        <tags>${data.tags.split(',').map(tag => `<tag>${tag.trim()}</tag>`).join('')}</tags>
+                        <urls>
+                            <home-page>${data.homePage}</home-page>
+                            <support>${data.support}</support>
+                            <wikipedia>${data.wikipedia}</wikipedia>
+                            <code-repository>${data.codeRepository}</code-repository>
+                        </urls>
+                        <previews>${data.previews.split(',').map(preview => `<preview><path>${preview.trim()}</path></preview>`).join('')}</previews>
+                        <flight-model>${data.flightModel}</flight-model>
+                        <aero>${data.aero}</aero>
+                        <startup>
+                            <splash-logo-image>${data.splashLogoImage}</splash-logo-image>
+                        </startup>
+                        <model>
+                            <path>${data.modelPath}</path>
+                            <fallback-model-index>${data.fallbackModelIndex}</fallback-model-index>
+                        </model>
+                        <sound>
+                            <path>${data.soundPath}</path>
+                        </sound>
+                        <panel>
+                            <path>${data.panelPath}</path>
+                        </panel>
+                        <autopilot>
+                            <path>${data.autopilotPath}</path>
+                        </autopilot>
+                        <checklists include="${data.checklists}"></checklists>
+                    </sim>
+                    <aircraft>
+                        <icao>
+                            <type>${data.icaoType}</type>
+                            <wake-turbulence-category>${data.wakeTurbulenceCategory}</wake-turbulence-category>
+                            <equipment>${data.equipment}</equipment>
+                            <surveillance>${data.surveillance}</surveillance>
+                        </icao>
+                        <performance>
+                            <minimum>
+                                <takeoff-length-ft>${data.takeoffLength}</takeoff-length-ft>
+                                <landing-length-ft>${data.landingLength}</landing-length-ft>
+                            </minimum>
+                            <cruise>
+                                <airspeed-knots>${data.cruiseAirspeed}</airspeed-knots>
+                                <altitude-ft>${data.cruiseAltitude}</altitude-ft>
+                            </cruise>
+                            <approach>
+                                <airspeed-knots>${data.approachAirspeed}</airspeed-knots>
+                            </approach>
+                            <maximum>
+                                <altitude-ft>${data.maximumAltitude}</altitude-ft>
+                                <mach>${data.maximumMach}</mach>
+                                <airspeed-knots>${data.maximumAirspeed}</airspeed-knots>
+                            </maximum>
+                        </performance>
+                    </aircraft>
                 </PropertyList>
             `;
 
