@@ -22,8 +22,25 @@
         <button type="submit">Generate XML</button>
     </form>
 
-    <div id="output"></div>
+    <pre id="output"></pre>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('aircraftForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const xml = `
+                <PropertyList>
+                    <name>${data.name}</name>
+                    <description>${data.description}</description>
+                    <author>${data.author}</author>
+                </PropertyList>
+            `;
+
+            document.getElementById('output').textContent = xml;
+        });
+    </script>
 </body>
 </html>
